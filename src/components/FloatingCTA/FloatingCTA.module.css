@@ -1,53 +1,15 @@
-.wrapper {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  z-index: 100;
-}
-
-.label {
-  background: var(--navy);
-  color: white;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.625rem 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  white-space: nowrap;
-  pointer-events: none;
-}
-
 .btn {
-  position: relative;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  box-shadow: var(--shadow-teal);
-  flex-shrink: 0;
-  z-index: 1;
+  position: fixed; bottom: 2rem; right: 2rem;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--c-primary);
+  color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sh-primary);
+  z-index: 90;
 }
-
-.pulse {
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 2px solid var(--teal);
-  opacity: 0.4;
+.ring {
+  position: absolute; inset: -6px; border-radius: 50%;
+  border: 2px solid var(--c-primary);
   pointer-events: none;
 }
-
-@media (max-width: 480px) {
-  .wrapper { bottom: 1rem; right: 1rem; }
-  .label { display: none; }
-}
+@media (max-width: 480px) { .btn { bottom: 1rem; right: 1rem; } }

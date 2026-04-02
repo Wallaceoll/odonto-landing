@@ -1,85 +1,66 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import styles from './Services.module.css'
 
 const services = [
   {
-    emoji: '✨',
+    icon: '✦',
     title: 'Clareamento Dental',
-    desc: 'Técnica laser de última geração para um sorriso até 8 tons mais branco em uma única sessão. Seguro, rápido e duradouro.',
-    tag: 'Mais Procurado',
-    tagColor: '#2a9dba',
-    time: '1 sessão',
+    desc: 'Tecnologia LED de última geração. Em uma única sessão, seu sorriso pode ser até 8 tons mais luminoso — sem sensibilidade.',
+    tag: 'Mais Buscado',
+    accent: 'var(--c-primary)',
   },
   {
-    emoji: '🦷',
+    icon: '◈',
     title: 'Implante Dentário',
-    desc: 'Implantes de titânio com tecnologia 3D para planejamento preciso. Resultado idêntico ao dente natural com durabilidade vitalícia.',
+    desc: 'Planejamento 3D cirúrgico, implantes de titânio biocompatível e resultado que imita perfeitamente o dente natural.',
     tag: 'Alta Precisão',
-    tagColor: '#1a7a94',
-    time: '2–4 meses',
+    accent: 'var(--c-primary-dark)',
   },
   {
-    emoji: '📐',
-    title: 'Ortodontia',
-    desc: 'Alinhadores invisíveis (Invisalign) e aparelhos estéticos para correção do posicionamento dental com máximo conforto.',
-    tag: 'Discreto',
-    tagColor: '#0d3d52',
-    time: '12–24 meses',
+    icon: '◎',
+    title: 'Invisalign®',
+    desc: 'Alinhadores invisíveis personalizados digitalmente. Corrija o posicionamento dos seus dentes de forma discreta e confortável.',
+    tag: 'Sem Aparelho',
+    accent: '#17A589',
   },
   {
-    emoji: '💎',
+    icon: '◇',
     title: 'Facetas de Porcelana',
-    desc: 'Laminados ultrafinos de porcelana que transformam completamente o formato e a cor dos dentes. Design do sorriso personalizado.',
-    tag: 'Transformação Total',
-    tagColor: '#c8a96e',
-    time: '2 sessões',
+    desc: 'Lâminas cerâmicas ultrafinas moldadas para o formato ideal do seu rosto. O caminho mais direto para um sorriso de impacto.',
+    tag: 'Design do Sorriso',
+    accent: 'var(--c-gold)',
   },
   {
-    emoji: '🛡️',
-    title: 'Prevenção & Limpeza',
-    desc: 'Profilaxia profissional com ultrassom e jato de bicarbonato. Detecção precoce de cáries e periodontia para saúde em dia.',
+    icon: '○',
+    title: 'Próteses & Reabilitação',
+    desc: 'Protocolos All-on-4 e All-on-6 para quem perdeu dentes. Recupere função mastigatória e confiança em um único planejamento.',
+    tag: 'Reabilitação Total',
+    accent: 'var(--c-primary)',
+  },
+  {
+    icon: '◉',
+    title: 'Prevenção & Saúde',
+    desc: 'Limpeza profissional, raio-X digital e avaliação periodontal. Porque cuidar do sorriso começa antes do problema aparecer.',
     tag: 'Essencial',
-    tagColor: '#34c98c',
-    time: '1 hora',
-  },
-  {
-    emoji: '🌟',
-    title: 'Próteses Totais',
-    desc: 'Próteses sobre implante (protocolo all-on-4 e all-on-6) e próteses removíveis de alta estética para reabilitação completa.',
-    tag: 'Reabilitação',
-    tagColor: '#7ec8d8',
-    time: 'Personalizado',
+    accent: '#17A589',
   },
 ]
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
-}
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+const container = { hidden: {}, show: { transition: { staggerChildren: .09 } } }
+const card = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: .55, ease: [.22, 1, .36, 1] } },
 }
 
 export default function Services({ onBooking }) {
   return (
     <section id="services" className={styles.section}>
       <div className={styles.container}>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className={styles.header}
-        >
-          <span className={styles.eyebrow}>Nossos Serviços</span>
-          <h2 className={styles.title}>Cuidado Completo para o seu Sorriso</h2>
-          <p className={styles.subtitle}>
-            Tecnologia de ponta aliada à expertise dos melhores especialistas para cada necessidade do seu sorriso.
-          </p>
-        </motion.div>
+        <div className="section-header">
+          <span className="eyebrow">Tratamentos</span>
+          <h2 className="section-title">Cada detalhe do seu sorriso tem solução aqui.</h2>
+          <p className="section-sub">Do estético ao funcional — temos o especialista certo e a tecnologia para cada caso.</p>
+        </div>
 
         <motion.div
           variants={container}
@@ -89,36 +70,34 @@ export default function Services({ onBooking }) {
           className={styles.grid}
         >
           {services.map((s, i) => (
-            <motion.div key={i} variants={item} className={styles.card} whileHover={{ y: -6 }}>
-              <div className={styles.cardTop}>
-                <span className={styles.emoji}>{s.emoji}</span>
-                <span className={styles.tag} style={{ background: s.tagColor + '20', color: s.tagColor, borderColor: s.tagColor + '40' }}>
-                  {s.tag}
-                </span>
-              </div>
+            <motion.div
+              key={i}
+              variants={card}
+              whileHover={{ y: -5 }}
+              className={styles.card}
+              style={{ '--accent': s.accent }}
+            >
+              <div className={styles.cardIcon}>{s.icon}</div>
+              <span className={styles.cardTag}>{s.tag}</span>
               <h3 className={styles.cardTitle}>{s.title}</h3>
               <p className={styles.cardDesc}>{s.desc}</p>
-              <div className={styles.cardFooter}>
-                <span className={styles.time}>⏱ {s.time}</span>
-                <button onClick={onBooking} className={styles.cardBtn}>
-                  Agendar <ArrowRight size={14} />
-                </button>
-              </div>
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: .2 }}
           viewport={{ once: true }}
-          className={styles.cta}
+          className={styles.bottom}
         >
-          <p>Não encontrou o tratamento que procura?</p>
-          <button onClick={onBooking} className={styles.ctaBtn}>
-            Consulta de Avaliação Gratuita
-            <ArrowRight size={18} />
+          <div className={styles.bottomText}>
+            <strong>Não sabe por onde começar?</strong>
+            <span>Nossa primeira avaliação é gratuita e sem compromisso.</span>
+          </div>
+          <button onClick={onBooking} className="btn-primary">
+            Agendar Avaliação Gratuita
           </button>
         </motion.div>
       </div>

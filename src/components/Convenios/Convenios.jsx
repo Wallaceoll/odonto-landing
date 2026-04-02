@@ -1,111 +1,92 @@
 import { motion } from 'framer-motion'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 import styles from './Convenios.module.css'
 
-const convenios = [
-  { name: 'Unimed', color: '#00a650' },
-  { name: 'Bradesco Saúde', color: '#cc0000' },
-  { name: 'SulAmérica', color: '#003087' },
-  { name: 'Amil', color: '#e4002b' },
-  { name: 'Porto Seguro', color: '#004b8d' },
-  { name: 'Prevent Senior', color: '#00698c' },
-  { name: 'Golden Cross', color: '#c8960c' },
-  { name: 'Odontoprev', color: '#0080c6' },
+const plans = [
+  { name: 'Unimed', abbr: 'U', color: '#00a650' },
+  { name: 'Bradesco', abbr: 'B', color: '#cc0000' },
+  { name: 'SulAmérica', abbr: 'S', color: '#003087' },
+  { name: 'Amil', abbr: 'A', color: '#e4002b' },
+  { name: 'Porto Seguro', abbr: 'P', color: '#004b8d' },
+  { name: 'Prevent Senior', abbr: 'PS', color: '#00698c' },
+  { name: 'Golden Cross', abbr: 'G', color: '#c8960c' },
+  { name: 'Odontoprev', abbr: 'O', color: '#0080c6' },
 ]
 
-const benefits = [
-  'Sem taxa de adesão ou mensalidade extra',
-  'Atendimento de emergência incluído',
-  'Procedimentos estéticos com desconto especial',
-  'Consulta de avaliação sempre gratuita',
-  'Parcelamento em até 18x sem juros',
-  'Programa fidelidade com benefícios exclusivos',
+const perks = [
+  'Primeira consulta sempre gratuita',
+  'Parcelamento em até 18× sem juros',
+  'Atendimento de urgência incluso',
+  'Orçamento detalhado sem surpresas',
 ]
 
 export default function Convenios({ onBooking }) {
   return (
     <section id="convenios" className={styles.section}>
       <div className={styles.container}>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className={styles.header}
-        >
-          <span className={styles.eyebrow}>Convênios & Formas de Pagamento</span>
-          <h2 className={styles.title}>Aceitamos os Principais Planos Odontológicos</h2>
-          <p className={styles.subtitle}>
-            Trabalhamos com os maiores convênios do país para facilitar o acesso ao cuidado que você merece.
-          </p>
-        </motion.div>
+        <div className="section-header">
+          <span className="eyebrow">Convênios & Pagamento</span>
+          <h2 className="section-title">Seu plano provavelmente é aceito aqui.</h2>
+          <p className="section-sub">Trabalhamos com os principais convênios e oferecemos condições flexíveis para quem não tem plano.</p>
+        </div>
 
-        {/* Logos grid */}
+        {/* Logo grid */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: .6 }}
           viewport={{ once: true }}
-          className={styles.logosGrid}
+          className={styles.logos}
         >
-          {convenios.map((c, i) => (
+          {plans.map((p, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.04, y: -3 }}
+              whileHover={{ y: -3, scale: 1.03 }}
               className={styles.logoCard}
             >
-              <div className={styles.logoCircle} style={{ background: c.color + '15', borderColor: c.color + '30' }}>
-                <span className={styles.logoInitial} style={{ color: c.color }}>{c.name[0]}</span>
+              <div className={styles.logoIcon} style={{ background: p.color + '18', borderColor: p.color + '35' }}>
+                <span style={{ color: p.color }}>{p.abbr}</span>
               </div>
-              <span className={styles.logoName}>{c.name}</span>
+              <span className={styles.logoName}>{p.name}</span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Benefits + CTA split */}
+        {/* Split */}
         <div className={styles.split}>
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: .65 }}
             viewport={{ once: true }}
-            className={styles.benefitsCol}
+            className={styles.perksCol}
           >
-            <h3 className={styles.benefitsTitle}>Por que Escolher a DentalCare?</h3>
-            <ul className={styles.benefitsList}>
-              {benefits.map((b, i) => (
-                <li key={i} className={styles.benefitItem}>
-                  <CheckCircle size={18} className={styles.checkIcon} />
-                  <span>{b}</span>
+            <h3 className={styles.perksTitle}>Facilitamos cada etapa do seu cuidado.</h3>
+            <ul className={styles.perksList}>
+              {perks.map((p, i) => (
+                <li key={i} className={styles.perk}>
+                  <Check size={16} className={styles.checkIcon} />
+                  <span>{p}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: .65 }}
             viewport={{ once: true }}
-            className={styles.ctaCard}
+            className={styles.ctaBox}
           >
-            <div className={styles.ctaCardInner}>
-              <span className={styles.ctaEmoji}>🦷</span>
-              <h3 className={styles.ctaTitle}>Primeira Consulta Gratuita</h3>
-              <p className={styles.ctaText}>
-                Venha conhecer nosso consultório e receba uma avaliação completa sem nenhum custo. Sem compromisso.
-              </p>
-              <div className={styles.ctaHighlights}>
-                {['Raio-X Panorâmico', 'Avaliação Clínica', 'Plano de Tratamento'].map((h, i) => (
-                  <span key={i} className={styles.ctaHighlight}>✓ {h}</span>
-                ))}
-              </div>
-              <button onClick={onBooking} className={styles.ctaBtn}>
-                Agendar Avaliação Gratuita
-                <ArrowRight size={18} />
-              </button>
-              <p className={styles.ctaNote}>Sem fila de espera · Resposta em até 1h</p>
-            </div>
+            <span className={styles.ctaEyebrow}>Sem compromisso</span>
+            <h3 className={styles.ctaTitle}>Avaliação gratuita, completa e sem pressa.</h3>
+            <p className={styles.ctaText}>
+              Venha conhecer o consultório. Fazemos raio-X panorâmico, avaliação clínica e apresentamos um plano personalizado — de graça.
+            </p>
+            <button onClick={onBooking} className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
+              Agendar Avaliação Gratuita
+            </button>
           </motion.div>
         </div>
       </div>

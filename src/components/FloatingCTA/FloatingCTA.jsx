@@ -1,62 +1,38 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
+import { CalendarCheck } from 'lucide-react'
 import styles from './FloatingCTA.module.css'
 
 export default function FloatingCTA({ onBooking }) {
-  const [visible, setVisible] = useState(false)
-  const [label, setLabel] = useState(true)
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 400)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    // Auto-hide label after 4s
-    const timer = setTimeout(() => setLabel(false), 4000)
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      clearTimeout(timer)
-    }
+    const fn = () => setShow(window.scrollY > 500)
+    window.addEventListener('scroll', fn, { passive: true })
+    return () => window.removeEventListener('scroll', fn)
   }, [])
 
   return (
     <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.8 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-          className={styles.wrapper}
+      {show && (
+        <motion.button
+          initial={{ opacity: 0, scale: .8, y: 12 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: .8, y: 12 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+          onClick={onBooking}
+          className={styles.btn}
+          aria-label="Agendar consulta"
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: .95 }}
         >
-          <AnimatePresence>
-            {label && (
-              <motion.span
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 10 }}
-                className={styles.label}
-              >
-                Agendar Consulta Grátis
-              </motion.span>
-            )}
-          </AnimatePresence>
-          <motion.button
-            onClick={onBooking}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.btn}
-            aria-label="Agendar consulta"
-            onMouseEnter={() => setLabel(true)}
-            onMouseLeave={() => setLabel(false)}
-          >
-            <MessageCircle size={24} fill="white" />
-            <motion.span
-              animate={{ scale: [1, 1.4, 1] }}
-              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-              className={styles.pulse}
-            />
-          </motion.button>
-        </motion.div>
+          <CalendarCheck size={22} />
+          <motion.span
+            className={styles.ring}
+            animate={{ scale: [1, 1.55, 1], opacity: [.5, 0, .5] }}
+            transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 1.5 }}
+          />
+        </motion.button>
       )}
     </AnimatePresence>
   )
