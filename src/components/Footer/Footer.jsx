@@ -12,8 +12,6 @@ export default function Footer() {
     <footer id="footer" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
-
-          {/* Brand */}
           <div className={styles.brand}>
             <div className={styles.logoRow}>
               <svg viewBox="0 0 38 38" fill="none" width="34" height="34">
@@ -51,7 +49,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
           {Object.entries(links).map(([group, items]) => (
             <div key={group} className={styles.col}>
               <h4 className={styles.colTitle}>{group}</h4>

@@ -73,7 +73,6 @@
 .trustLabel { font-size: .85rem; color: var(--c-muted); }
 .trustLabel strong { color: var(--c-ink); }
 
-/* Image col */
 .imgCol {
   padding: 1rem 1.5rem 1rem 1.5rem;
 }
@@ -114,7 +113,6 @@
   position: absolute;
   z-index: 3;
   bottom: 1.5rem;
-
   left: 1rem;
   background: white;
   border-radius: var(--r-full);
@@ -148,6 +146,7 @@
   position: absolute;
   z-index: 3;
   top: 1.25rem;
+  right: 1rem;
   background: var(--c-navy);
   border-radius: var(--r-lg);
   padding: .7rem 1rem;

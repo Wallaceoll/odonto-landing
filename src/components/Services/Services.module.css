@@ -34,11 +34,16 @@
 }
 .card:hover::before { height: 100%; }
 
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .cardIcon {
   font-size: 1.5rem;
   color: var(--accent);
   line-height: 1;
-  margin-bottom: .1rem;
 }
 .cardTag {
   display: inline-block;
@@ -51,10 +56,31 @@
   padding: .2rem .65rem;
   border-radius: var(--r-full);
   border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-  align-self: flex-start;
 }
 .cardTitle { font-size: 1.1rem; font-weight: 700; color: var(--c-navy); }
 .cardDesc { font-size: .9rem; line-height: 1.65; color: var(--c-slate); flex: 1; }
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: .5rem 0 0;
+  cursor: pointer;
+  transition: var(--tx);
+  border-top: 1px solid var(--c-border);
+  width: 100%;
+  margin-top: .25rem;
+}
+.cardBtn:hover {
+  gap: .6rem;
+  opacity: .8;
+}
 
 /* Bottom CTA strip */
 .bottom {

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import styles from './Services.module.css'
 
 const services = [
@@ -77,10 +78,15 @@ export default function Services({ onBooking }) {
               className={styles.card}
               style={{ '--accent': s.accent }}
             >
-              <div className={styles.cardIcon}>{s.icon}</div>
-              <span className={styles.cardTag}>{s.tag}</span>
+              <div className={styles.cardTop}>
+                <div className={styles.cardIcon}>{s.icon}</div>
+                <span className={styles.cardTag}>{s.tag}</span>
+              </div>
               <h3 className={styles.cardTitle}>{s.title}</h3>
               <p className={styles.cardDesc}>{s.desc}</p>
+              <button onClick={onBooking} className={styles.cardBtn}>
+                Agendar <ArrowRight size={14} />
+              </button>
             </motion.div>
           ))}
         </motion.div>

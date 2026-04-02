@@ -14,18 +14,15 @@
 .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
 .content { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 
-/* Logo */
 .logo { display: flex; align-items: center; gap: .65rem; flex-shrink: 0; }
 .logoTitle { display: block; font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--c-navy); line-height: 1; }
 .logoSub { display: block; font-size: .6rem; font-weight: 700; color: var(--c-primary); text-transform: uppercase; letter-spacing: .12em; margin-top: 2px; }
 
-/* Nav */
 .nav { display: none; align-items: center; gap: .1rem; }
 @media (min-width: 1024px) { .nav { display: flex; } }
 .navItem { background: none; border: none; font-size: .875rem; font-weight: 500; color: var(--c-slate); padding: .45rem .85rem; border-radius: var(--r-sm); transition: var(--tx); }
 .navItem:hover { color: var(--c-primary); background: var(--c-primary-glow); }
 
-/* Right */
 .right { display: flex; align-items: center; gap: .75rem; }
 .phone { display: none; align-items: center; gap: .35rem; font-size: .85rem; font-weight: 500; color: var(--c-ink); transition: var(--tx); }
 @media (min-width: 768px) { .phone { display: flex; } }

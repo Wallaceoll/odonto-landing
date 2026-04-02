@@ -62,7 +62,6 @@ export default function BookingModal({ isOpen, onClose }) {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               role="dialog" aria-modal="true"
             >
-              {/* Header */}
               <div className={styles.head}>
                 <div className={styles.headText}>
                   <h2 className={styles.headTitle}>
@@ -79,7 +78,6 @@ export default function BookingModal({ isOpen, onClose }) {
                 </button>
               </div>
 
-              {/* Step 1 — Form */}
               {step === 1 && (
                 <form onSubmit={submit} className={styles.form}>
                   <div className={styles.grid2}>
@@ -131,7 +129,6 @@ export default function BookingModal({ isOpen, onClose }) {
                 </form>
               )}
 
-              {/* Step 2 — Success */}
               {step === 2 && (
                 <motion.div
                   className={styles.success}

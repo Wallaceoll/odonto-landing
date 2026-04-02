@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Calendar, ArrowRight, ChevronDown } from 'lucide-react'
+import { Calendar, ChevronDown } from 'lucide-react'
 import styles from './Hero.module.css'
 
 export default function Hero({ onBooking }) {
@@ -12,7 +12,6 @@ export default function Hero({ onBooking }) {
       <div className={styles.container}>
         <div className={styles.grid}>
 
-          {/* ── Text ── */}
           <motion.div
             className={styles.textCol}
             initial={{ opacity: 0, y: 28 }}
@@ -22,23 +21,15 @@ export default function Hero({ onBooking }) {
             <span className="eyebrow">✦ Odontologia de Alta Performance</span>
 
             <h1 className={styles.h1}>
-              Você merece um sorriso que<br />
-              <em className={styles.em}>fala por você.</em>
+              O sorriso que você sempre<br />
+              <em className={styles.em}>quis ter está aqui.</em>
             </h1>
 
             <p className={styles.lead}>
-              Tratamentos estéticos e restauradores com tecnologia de ponta, em um ambiente pensado para que você se sinta cuidado — da recepção à última consulta.
+              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem você — e tecnologia que entrega resultados visíveis desde a primeira consulta.
             </p>
 
             <div className={styles.actions}>
-              <motion.button
-                onClick={onBooking}
-                className={`${styles.mainCta} btn-primary`}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: .97 }}
-              >
-                <Calendar size={18} /> Quero Agendar Agora
-              </motion.button>
               <button
                 onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-ghost"
@@ -65,7 +56,6 @@ export default function Hero({ onBooking }) {
             </div>
           </motion.div>
 
-          {/* ── Image ── */}
           <motion.div
             className={styles.imgCol}
             initial={{ opacity: 0, scale: .96 }}
@@ -80,7 +70,6 @@ export default function Hero({ onBooking }) {
               />
               <div className={styles.imgVignette} />
 
-              {/* Floating pill */}
               <motion.div
                 className={styles.pill}
                 initial={{ opacity: 0, x: -16 }}
@@ -91,7 +80,6 @@ export default function Hero({ onBooking }) {
                 <span>Próximo horário disponível — hoje</span>
               </motion.div>
 
-              {/* Rating chip */}
               <motion.div
                 className={styles.ratingChip}
                 initial={{ opacity: 0, y: -12 }}

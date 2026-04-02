@@ -30,7 +30,6 @@ export default function Convenios({ onBooking }) {
           <p className="section-sub">Trabalhamos com os principais convênios e oferecemos condições flexíveis para quem não tem plano.</p>
         </div>
 
-        {/* Logo grid */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -52,7 +51,6 @@ export default function Convenios({ onBooking }) {
           ))}
         </motion.div>
 
-        {/* Split */}
         <div className={styles.split}>
           <motion.div
             initial={{ opacity: 0, x: -24 }}
