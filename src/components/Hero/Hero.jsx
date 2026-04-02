@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Calendar, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 import styles from './Hero.module.css'
 
 export default function Hero({ onBooking }) {
