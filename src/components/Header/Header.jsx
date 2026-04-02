@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
 import styles from './Header.module.css'
 
@@ -16,7 +16,7 @@ export default function Header({ onBooking }) {
     { label: 'Tratamentos', href: '#services' },
     { label: 'Equipe', href: '#team' },
     { label: 'Depoimentos', href: '#testimonials' },
-    { label: 'Convênios', href: '#convenios' },
+    { label: 'Convenios', href: '#convenios' },
     { label: 'Contato', href: '#footer' },
   ]
 
@@ -42,8 +42,8 @@ export default function Header({ onBooking }) {
           </a>
 
           <nav className={styles.nav}>
-            {nav.map(n => (
-              <button key={n.href} onClick={() => go(n.href)} className={styles.navItem}>{n.label}</button>
+            {nav.map((item) => (
+              <button key={item.href} onClick={() => go(item.href)} className={styles.navItem}>{item.label}</button>
             ))}
           </nav>
 
@@ -60,8 +60,8 @@ export default function Header({ onBooking }) {
 
         {open && (
           <nav className={styles.mobileNav}>
-            {nav.map(n => (
-              <button key={n.href} onClick={() => go(n.href)} className={styles.mobileNavItem}>{n.label}</button>
+            {nav.map((item) => (
+              <button key={item.href} onClick={() => go(item.href)} className={styles.mobileNavItem}>{item.label}</button>
             ))}
             <button onClick={() => { setOpen(false); onBooking() }} className={`${styles.mobileCTA} btn-primary`}>
               Agendar Consulta

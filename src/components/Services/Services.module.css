@@ -1,4 +1,4 @@
-.section { padding: var(--section-py) 0; background: var(--c-surface); }
+﻿.section { padding: var(--section-py) 0; background: var(--c-surface); }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
 
 .grid {
@@ -82,7 +82,6 @@
   opacity: .8;
 }
 
-/* Bottom CTA strip */
 .bottom {
   margin-top: 3rem;
   padding: 2rem 2.5rem;
@@ -99,3 +98,4 @@
 .bottomText { display: flex; flex-direction: column; gap: .3rem; }
 .bottomText strong { color: white; font-size: 1.1rem; }
 .bottomText span { color: rgba(255,255,255,.55); font-size: .9rem; }
+

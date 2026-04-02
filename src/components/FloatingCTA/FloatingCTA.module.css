@@ -1,4 +1,4 @@
-.btn {
+﻿.btn {
   position: fixed; bottom: 2rem; right: 2rem;
   width: 54px; height: 54px; border-radius: 50%;
   background: var(--c-primary);
@@ -13,3 +13,4 @@
   pointer-events: none;
 }
 @media (max-width: 480px) { .btn { bottom: 1rem; right: 1rem; } }
+

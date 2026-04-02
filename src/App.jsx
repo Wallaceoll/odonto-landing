@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Services from './components/Services/Services'
@@ -12,7 +12,6 @@ import BookingModal from './components/BookingModal/BookingModal'
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Scroll reveal
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,8 +23,10 @@ export default function App() {
       },
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     )
+
     const elements = document.querySelectorAll('.reveal')
-    elements.forEach((el) => observer.observe(el))
+    elements.forEach((element) => observer.observe(element))
+
     return () => observer.disconnect()
   }, [])
 

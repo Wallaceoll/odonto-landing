@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import styles from './Hero.module.css'
 
-export default function Hero({ onBooking }) {
+export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.noise} />
@@ -11,22 +11,21 @@ export default function Hero({ onBooking }) {
 
       <div className={styles.container}>
         <div className={styles.grid}>
-
           <motion.div
             className={styles.textCol}
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .8, ease: [.22, 1, .36, 1] }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="eyebrow">✦ Odontologia de Alta Performance</span>
+            <span className="eyebrow">Odontologia de Alta Performance</span>
 
             <h1 className={styles.h1}>
-              O sorriso que você sempre<br />
-              <em className={styles.em}>quis ter está aqui.</em>
+              O sorriso que voce sempre<br />
+              <em className={styles.em}>quis ter esta aqui.</em>
             </h1>
 
             <p className={styles.lead}>
-              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem você — e tecnologia que entrega resultados visíveis desde a primeira consulta.
+              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem voce e tecnologia que entrega resultados visiveis desde a primeira consulta.
             </p>
 
             <div className={styles.actions}>
@@ -40,13 +39,13 @@ export default function Hero({ onBooking }) {
 
             <div className={styles.trust}>
               <div className={styles.avatars}>
-                {[11,12,13].map((n, i) => (
+                {[11, 12, 13].map((n, index) => (
                   <img
                     key={n}
                     src={`https://i.pravatar.cc/40?img=${n}`}
                     alt=""
                     className={styles.avatar}
-                    style={{ marginLeft: i ? '-10px' : 0, zIndex: 3 - i }}
+                    style={{ marginLeft: index ? '-10px' : 0, zIndex: 3 - index }}
                   />
                 ))}
               </div>
@@ -58,14 +57,14 @@ export default function Hero({ onBooking }) {
 
           <motion.div
             className={styles.imgCol}
-            initial={{ opacity: 0, scale: .96 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: .9, delay: .15, ease: [.22, 1, .36, 1] }}
+            transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.imgWrap}>
               <img
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=85"
-                alt="Consultório premium DentalCare"
+                alt="Consultorio premium DentalCare"
                 className={styles.heroImg}
               />
               <div className={styles.imgVignette} />
@@ -74,20 +73,20 @@ export default function Hero({ onBooking }) {
                 className={styles.pill}
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: .7 }}
+                transition={{ delay: 0.7 }}
               >
                 <div className={styles.pillDot} />
-                <span>Próximo horário disponível — hoje</span>
+                <span>Proximo horario disponivel hoje</span>
               </motion.div>
 
               <motion.div
                 className={styles.ratingChip}
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: .85 }}
+                transition={{ delay: 0.85 }}
               >
                 <span className={styles.ratingScore}>5.0</span>
-                <span className={styles.ratingStars}>★★★★★</span>
+                <span className={styles.ratingStars}>*****</span>
                 <span className={styles.ratingSrc}>Google</span>
               </motion.div>
             </div>

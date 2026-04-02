@@ -1,4 +1,4 @@
-.header {
+﻿.header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
@@ -32,8 +32,8 @@
 .burger { background: none; border: none; color: var(--c-navy); padding: .4rem; display: flex; align-items: center; }
 @media (min-width: 1024px) { .burger { display: none; } }
 
-/* Mobile */
 .mobileNav { display: flex; flex-direction: column; gap: .2rem; padding: .75rem 0; border-top: 1px solid var(--c-border); margin-top: .4rem; background: white; }
 .mobileNavItem { background: none; border: none; font-size: .95rem; font-weight: 500; color: var(--c-navy); padding: .7rem 1rem; text-align: left; border-radius: var(--r-sm); transition: var(--tx); }
 .mobileNavItem:hover { background: var(--c-primary-glow); color: var(--c-primary); }
 .mobileCTA { display: flex; align-items: center; gap: .45rem; margin-top: .4rem; width: 100%; justify-content: center; }
+

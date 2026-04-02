@@ -1,13 +1,14 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Youtube } from 'lucide-react'
+﻿import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Youtube } from 'lucide-react'
 import styles from './Footer.module.css'
 
 const links = {
-  Tratamentos: ['Clareamento', 'Implantes', 'Invisalign®', 'Facetas', 'Próteses', 'Prevenção'],
-  Clínica: ['Sobre Nós', 'Nossa Equipe', 'Convênios', 'FAQ'],
+  Tratamentos: ['Clareamento', 'Implantes', 'Invisalign', 'Facetas', 'Proteses', 'Prevencao'],
+  Clinica: ['Sobre Nos', 'Nossa Equipe', 'Convenios', 'FAQ'],
 }
 
 export default function Footer() {
   const yr = new Date().getFullYear()
+
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.container}>
@@ -24,18 +25,18 @@ export default function Footer() {
                 <span className={styles.logoSub}>Premium</span>
               </div>
             </div>
-            <p className={styles.tagline}>Odontologia que respeita o seu tempo, o seu orçamento e, acima de tudo, o seu sorriso.</p>
+            <p className={styles.tagline}>Odontologia que respeita o seu tempo, o seu orcamento e, acima de tudo, o seu sorriso.</p>
             <div className={styles.contacts}>
               {[
                 { icon: <Phone size={14}/>, val: '(11) 3000-0000', href: 'tel:+5511999999999' },
                 { icon: <Phone size={14}/>, val: 'WhatsApp: (11) 99999-9999', href: 'https://wa.me/5511999999999' },
                 { icon: <Mail size={14}/>, val: 'contato@dentalcare.com.br', href: 'mailto:contato@dentalcare.com.br' },
-                { icon: <MapPin size={14}/>, val: 'Av. Paulista, 1000 — Bela Vista, SP' },
-                { icon: <Clock size={14}/>, val: 'Seg–Sex 8h–20h · Sáb 8h–14h' },
-              ].map((c, i) => (
-                c.href
-                  ? <a key={i} href={c.href} className={styles.contact}>{c.icon}{c.val}</a>
-                  : <span key={i} className={styles.contact}>{c.icon}{c.val}</span>
+                { icon: <MapPin size={14}/>, val: 'Av. Paulista, 1000 - Bela Vista, SP' },
+                { icon: <Clock size={14}/>, val: 'Seg-Sex 8h-20h | Sab 8h-14h' },
+              ].map((contact, index) => (
+                contact.href
+                  ? <a key={index} href={contact.href} className={styles.contact}>{contact.icon}{contact.val}</a>
+                  : <span key={index} className={styles.contact}>{contact.icon}{contact.val}</span>
               ))}
             </div>
             <div className={styles.socials}>
@@ -43,8 +44,8 @@ export default function Footer() {
                 { icon: <Instagram size={17}/>, href: '#', label: 'Instagram' },
                 { icon: <Facebook size={17}/>, href: '#', label: 'Facebook' },
                 { icon: <Youtube size={17}/>, href: '#', label: 'YouTube' },
-              ].map(s => (
-                <a key={s.label} href={s.href} aria-label={s.label} className={styles.social}>{s.icon}</a>
+              ].map((social) => (
+                <a key={social.label} href={social.href} aria-label={social.label} className={styles.social}>{social.icon}</a>
               ))}
             </div>
           </div>
@@ -53,12 +54,11 @@ export default function Footer() {
             <div key={group} className={styles.col}>
               <h4 className={styles.colTitle}>{group}</h4>
               <ul className={styles.colList}>
-                {items.map(l => <li key={l}><a href="#" className={styles.colLink}>{l}</a></li>)}
+                {items.map((item) => <li key={item}><a href="#" className={styles.colLink}>{item}</a></li>)}
               </ul>
             </div>
           ))}
 
-          {/* Map */}
           <div className={styles.mapCol}>
             <h4 className={styles.colTitle}>Como Chegar</h4>
             <div className={styles.mapWrap}>
@@ -70,13 +70,13 @@ export default function Footer() {
               />
             </div>
             <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer" className={styles.mapsLink}>
-              Abrir no Google Maps →
+              Abrir no Google Maps
             </a>
           </div>
         </div>
 
         <div className={styles.bottom}>
-          <p>© {yr} DentalCare Premium · Todos os direitos reservados</p>
+          <p>(c) {yr} DentalCare Premium | Todos os direitos reservados</p>
           <div className={styles.legal}>
             <a href="#">Privacidade</a>
             <a href="#">Termos</a>

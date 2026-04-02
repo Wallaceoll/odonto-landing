@@ -1,47 +1,47 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import styles from './Team.module.css'
-import beatrizAvatar from '../../assets/team/beatriz-monteiro.svg'
-import henriqueAvatar from '../../assets/team/henrique-leal.svg'
-import isabelaAvatar from '../../assets/team/isabela-fonseca.svg'
-import andreAvatar from '../../assets/team/andre-castilho.svg'
-import renataAvatar from '../../assets/team/renata-borges.svg'
+import helenaDuartePhoto from '../../assets/team-photos/helena-duarte.jpg'
+import rafaelMartinsPhoto from '../../assets/team-photos/rafael-martins.jpg'
+import camilaNogueiraPhoto from '../../assets/team-photos/camila-nogueira.jpg'
+import lucasFerrazPhoto from '../../assets/team-photos/lucas-ferraz.jpg'
+import marinaAlbuquerquePhoto from '../../assets/team-photos/marina-albuquerque.jpg'
 
 const team = [
   {
-    name: 'Dra. Beatriz Monteiro',
+    name: 'Dra. Helena Duarte',
     role: 'Implantodontia',
     spec: ['Implantes', 'Cirurgia Oral'],
-    img: beatrizAvatar,
-    quote: '"Cada implante que coloco devolve não só um dente — devolve confiança."',
+    img: helenaDuartePhoto,
+    quote: 'Cada implante que realizo devolve nao so um dente, mas tambem confianca.',
   },
   {
-    name: 'Dr. Henrique Leal',
-    role: 'Ortodontia & Invisalign',
-    spec: ['Invisalign®', 'Aparelho Estético'],
-    img: henriqueAvatar,
-    quote: '"Alinhamento perfeito começa com um plano honesto e personalizado."',
+    name: 'Dr. Rafael Martins',
+    role: 'Ortodontia e Invisalign',
+    spec: ['Invisalign', 'Aparelho Estetico'],
+    img: rafaelMartinsPhoto,
+    quote: 'Alinhamento perfeito comeca com um plano honesto e personalizado.',
   },
   {
-    name: 'Dra. Isabela Fonseca',
-    role: 'Estética & Facetas',
+    name: 'Dra. Camila Nogueira',
+    role: 'Estetica e Facetas',
     spec: ['Facetas', 'Clareamento'],
-    img: isabelaAvatar,
-    quote: '"Design do sorriso é arte que respeita a anatomia de cada paciente."',
+    img: camilaNogueiraPhoto,
+    quote: 'Design do sorriso e arte que respeita a anatomia de cada paciente.',
   },
   {
-    name: 'Dr. André Castilho',
-    role: 'Endodontia Microscópica',
+    name: 'Dr. Lucas Ferraz',
+    role: 'Endodontia Microscopica',
     spec: ['Endodontia', 'Microscopia'],
-    img: andreAvatar,
-    quote: '"Com microscopia, o tratamento de canal é preciso e quase indolor."',
+    img: lucasFerrazPhoto,
+    quote: 'Com microscopia, o tratamento de canal e preciso e quase indolor.',
   },
   {
-    name: 'Dra. Renata Borges',
-    role: 'Periodontia & Saúde Gengival',
+    name: 'Dra. Marina Albuquerque',
+    role: 'Periodontia e Saude Gengival',
     spec: ['Periodontia', 'Gengivoplastia'],
-    img: renataAvatar,
-    quote: '"Gengivas saudáveis são a fundação de qualquer sorriso bonito."',
+    img: marinaAlbuquerquePhoto,
+    quote: 'Gengivas saudaveis sao a fundacao de qualquer sorriso bonito.',
   },
 ]
 
@@ -60,6 +60,7 @@ export default function Team() {
         breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
       })
     }
+
     return () => ref.current?.destroy?.()
   }, [])
 
@@ -69,31 +70,33 @@ export default function Team() {
         <div className="section-header">
           <span className="eyebrow">Nossa Equipe</span>
           <h2 className="section-title">Especialistas que se importam com o seu resultado.</h2>
-          <p className="section-sub">Formação de alto nível, escuta ativa e técnica que se traduz em sorrisos reais.</p>
+          <p className="section-sub">Formacao de alto nivel, escuta ativa e tecnica que se traduz em sorrisos reais.</p>
         </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: .6 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className={styles.swiperWrap}
         >
           <div className="swiper teamSwiper">
             <div className="swiper-wrapper">
-              {team.map((d, i) => (
-                <div key={i} className="swiper-slide">
+              {team.map((dentist, index) => (
+                <div key={index} className="swiper-slide">
                   <div className={styles.card}>
                     <div className={styles.imgWrap}>
-                      <img src={d.img} alt={d.name} className={styles.img} />
+                      <img src={dentist.img} alt={dentist.name} className={styles.img} />
                     </div>
                     <div className={styles.body}>
                       <div className={styles.tags}>
-                        {d.spec.map((s, j) => <span key={j} className={styles.tag}>{s}</span>)}
+                        {dentist.spec.map((specialty, tagIndex) => (
+                          <span key={tagIndex} className={styles.tag}>{specialty}</span>
+                        ))}
                       </div>
-                      <h3 className={styles.name}>{d.name}</h3>
-                      <p className={styles.role}>{d.role}</p>
-                      <p className={styles.quote}>{d.quote}</p>
+                      <h3 className={styles.name}>{dentist.name}</h3>
+                      <p className={styles.role}>{dentist.role}</p>
+                      <p className={styles.quote}>{dentist.quote}</p>
                     </div>
                   </div>
                 </div>

@@ -1,55 +1,41 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
-/* ─── DESIGN SYSTEM ──────────────────────────────────────────── */
 :root {
-  /* Primary palette */
-  --c-primary:       #1D6FA4;   /* Ocean Blue — confiança, saúde */
-  --c-primary-light: #3B8EC4;
+  --c-primary:       #1D6FA4;   --c-primary-light: #3B8EC4;
   --c-primary-dark:  #145480;
   --c-primary-glow:  rgba(29, 111, 164, 0.18);
 
-  /* Neutral palette */
   --c-navy:    #0B2A3D;
   --c-ink:     #1A3344;
   --c-slate:   #3D5A6E;
   --c-muted:   #6B8CA0;
   --c-border:  rgba(29, 111, 164, 0.14);
-  --c-bg:      #F7FBFD;        /* quase branco com toque gelo */
-  --c-surface: #FFFFFF;
+  --c-bg:      #F7FBFD;        --c-surface: #FFFFFF;
   --c-surface2: #EEF6FB;
 
-  /* Accent */
-  --c-accent:  #17A589;   /* verde-teal para sucesso/destaque */
-  --c-gold:    #C8993A;   /* dourado só para badge premium */
-  --c-warn:    #E07B39;
+  --c-accent:  #17A589;   --c-gold:    #C8993A;   --c-warn:    #E07B39;
 
-  /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
 
-  /* Spacing */
   --section-py: 5.5rem;
 
-  /* Radius */
   --r-sm:  8px;
   --r-md:  14px;
   --r-lg:  22px;
   --r-xl:  36px;
   --r-full: 9999px;
 
-  /* Shadows */
   --sh-xs: 0 1px 4px rgba(11,42,61,.06);
   --sh-sm: 0 4px 16px rgba(11,42,61,.08);
   --sh-md: 0 10px 36px rgba(11,42,61,.12);
   --sh-lg: 0 24px 64px rgba(11,42,61,.16);
   --sh-primary: 0 8px 28px rgba(29,111,164,.28);
 
-  /* Transitions */
   --ease: cubic-bezier(.4,0,.2,1);
   --tx: all .28s var(--ease);
 }
 
-/* ─── RESET ──────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -64,7 +50,6 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font-family: var(--font-body); cursor: pointer; }
 
-/* ─── UTILITIES ──────────────────────────────────────────────── */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -105,7 +90,6 @@ button { font-family: var(--font-body); cursor: pointer; }
   text-align: center;
 }
 
-/* ─── BUTTONS ─────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -147,11 +131,10 @@ button { font-family: var(--font-body); cursor: pointer; }
   background: var(--c-primary-glow);
 }
 
-/* ─── SWIPER ──────────────────────────────────────────────────── */
 .swiper-button-next, .swiper-button-prev { color: var(--c-primary) !important; }
 .swiper-pagination-bullet-active { background: var(--c-primary) !important; }
 
-/* ─── SCROLLBAR ──────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--c-bg); }
 ::-webkit-scrollbar-thumb { background: var(--c-primary); border-radius: 3px; }
+

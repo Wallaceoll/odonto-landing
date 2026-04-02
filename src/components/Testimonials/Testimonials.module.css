@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   padding: var(--section-py) 0;
   background: linear-gradient(160deg, #0a2035 0%, #0d3550 60%, #0a2435 100%);
   position: relative;
@@ -119,3 +119,4 @@
   margin-left: auto; flex-shrink: 0;
   color: #FBBF24; font-size: .85rem; letter-spacing: 1px;
 }
+
