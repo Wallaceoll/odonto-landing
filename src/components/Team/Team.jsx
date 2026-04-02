@@ -1,41 +1,46 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import styles from './Team.module.css'
+import beatrizAvatar from '../../assets/team/beatriz-monteiro.svg'
+import henriqueAvatar from '../../assets/team/henrique-leal.svg'
+import isabelaAvatar from '../../assets/team/isabela-fonseca.svg'
+import andreAvatar from '../../assets/team/andre-castilho.svg'
+import renataAvatar from '../../assets/team/renata-borges.svg'
 
 const team = [
   {
     name: 'Dra. Beatriz Monteiro',
     role: 'Implantodontia',
     spec: ['Implantes', 'Cirurgia Oral'],
-    img: 'https://images.unsplash.com/photo-1612531385446-f7e6d131e1d0?w=480&q=80',
+    img: beatrizAvatar,
     quote: '"Cada implante que coloco devolve não só um dente — devolve confiança."',
   },
   {
     name: 'Dr. Henrique Leal',
     role: 'Ortodontia & Invisalign',
     spec: ['Invisalign®', 'Aparelho Estético'],
-    img: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=480&q=80',
+    img: henriqueAvatar,
     quote: '"Alinhamento perfeito começa com um plano honesto e personalizado."',
   },
   {
     name: 'Dra. Isabela Fonseca',
     role: 'Estética & Facetas',
     spec: ['Facetas', 'Clareamento'],
-    img: 'https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=480&q=80',
+    img: isabelaAvatar,
     quote: '"Design do sorriso é arte que respeita a anatomia de cada paciente."',
   },
   {
     name: 'Dr. André Castilho',
     role: 'Endodontia Microscópica',
     spec: ['Endodontia', 'Microscopia'],
-    img: 'https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=480&q=80',
+    img: andreAvatar,
     quote: '"Com microscopia, o tratamento de canal é preciso e quase indolor."',
   },
   {
     name: 'Dra. Renata Borges',
     role: 'Periodontia & Saúde Gengival',
     spec: ['Periodontia', 'Gengivoplastia'],
-    img: 'https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=480&q=80',
+    img: renataAvatar,
     quote: '"Gengivas saudáveis são a fundação de qualquer sorriso bonito."',
   },
 ]
