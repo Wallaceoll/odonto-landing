@@ -6,42 +6,42 @@ const services = [
   {
     icon: 'CL',
     title: 'Clareamento Dental',
-    desc: 'Tecnologia LED de ultima geracao. Em uma unica sessao, seu sorriso pode ser ate 8 tons mais luminoso sem sensibilidade.',
-    tag: 'Mais Buscado',
+    desc: 'Tecnologia LED de última geração. Em uma única sessão, seu sorriso pode ser até 8 tons mais luminoso sem sensibilidade.',
+    tag: 'Mais buscado',
     accent: 'var(--c-primary)',
   },
   {
     icon: 'IM',
-    title: 'Implante Dentario',
-    desc: 'Planejamento 3D cirurgico, implantes de titanio biocompativel e resultado que imita perfeitamente o dente natural.',
-    tag: 'Alta Precisao',
+    title: 'Implante Dentário',
+    desc: 'Planejamento 3D cirúrgico, implantes de titânio biocompatível e resultado que imita perfeitamente o dente natural.',
+    tag: 'Alta precisão',
     accent: 'var(--c-primary-dark)',
   },
   {
     icon: 'IN',
     title: 'Invisalign',
-    desc: 'Alinhadores invisiveis personalizados digitalmente. Corrija o posicionamento dos seus dentes de forma discreta e confortavel.',
-    tag: 'Sem Aparelho',
+    desc: 'Alinhadores invisíveis personalizados digitalmente. Corrija o posicionamento dos seus dentes de forma discreta e confortável.',
+    tag: 'Sem aparelho',
     accent: '#17A589',
   },
   {
     icon: 'FP',
     title: 'Facetas de Porcelana',
-    desc: 'Laminas ceramicas ultrafinas moldadas para o formato ideal do seu rosto. O caminho mais direto para um sorriso de impacto.',
-    tag: 'Design do Sorriso',
+    desc: 'Lâminas cerâmicas ultrafinas moldadas para o formato ideal do seu rosto. O caminho mais direto para um sorriso de impacto.',
+    tag: 'Design do sorriso',
     accent: 'var(--c-gold)',
   },
   {
     icon: 'PR',
-    title: 'Proteses e Reabilitacao',
-    desc: 'Protocolos All-on-4 e All-on-6 para quem perdeu dentes. Recupere funcao mastigatoria e confianca em um unico planejamento.',
-    tag: 'Reabilitacao Total',
+    title: 'Próteses e Reabilitação',
+    desc: 'Protocolos All-on-4 e All-on-6 para quem perdeu dentes. Recupere função mastigatória e confiança em um único planejamento.',
+    tag: 'Reabilitação total',
     accent: 'var(--c-primary)',
   },
   {
     icon: 'PS',
-    title: 'Prevencao e Saude',
-    desc: 'Limpeza profissional, raio-X digital e avaliacao periodontal. Porque cuidar do sorriso comeca antes do problema aparecer.',
+    title: 'Prevenção e Saúde',
+    desc: 'Limpeza profissional, raio-X digital e avaliação periodontal. Porque cuidar do sorriso começa antes do problema aparecer.',
     tag: 'Essencial',
     accent: '#17A589',
   },
@@ -59,8 +59,8 @@ export default function Services({ onBooking }) {
       <div className={styles.container}>
         <div className="section-header">
           <span className="eyebrow">Tratamentos</span>
-          <h2 className="section-title">Cada detalhe do seu sorriso tem solucao aqui.</h2>
-          <p className="section-sub">Do estetico ao funcional, temos o especialista certo e a tecnologia para cada caso.</p>
+          <h2 className="section-title">Cada detalhe do seu sorriso tem solução aqui.</h2>
+          <p className="section-sub">Do estético ao funcional, temos o especialista certo e a tecnologia para cada caso.</p>
         </div>
 
         <motion.div
@@ -99,11 +99,11 @@ export default function Services({ onBooking }) {
           className={styles.bottom}
         >
           <div className={styles.bottomText}>
-            <strong>Nao sabe por onde comecar?</strong>
-            <span>Nossa primeira avaliacao e gratuita e sem compromisso.</span>
+            <strong>Não sabe por onde começar?</strong>
+            <span>Nossa primeira avaliação é gratuita e sem compromisso.</span>
           </div>
           <button onClick={onBooking} className="btn-primary">
-            Agendar Avaliacao Gratuita
+            Agendar Avaliação Gratuita
           </button>
         </motion.div>
       </div>
