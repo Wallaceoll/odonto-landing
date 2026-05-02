@@ -60,12 +60,6 @@
   .imgCol { padding: 1rem 1.5rem 1rem 0; }
 }
 
-  padding: 1rem 1.5rem 1rem 1.5rem;
-}
-@media (min-width: 1024px) {
-  .imgCol { padding: 1rem 1.5rem 1rem 0; }
-}
-
 .imgWrap {
   position: relative;
   overflow: visible;
