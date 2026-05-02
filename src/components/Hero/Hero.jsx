@@ -20,12 +20,11 @@ export default function Hero() {
             <span className="eyebrow">Odontologia de Alta Performance</span>
 
             <h1 className={styles.h1}>
-              O sorriso que voce sempre<br />
-              <em className={styles.em}>quis ter esta aqui.</em>
+              O sorriso que você sempre quis ter, esta aqui.<br/>
             </h1>
 
             <p className={styles.lead}>
-              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem voce e tecnologia que entrega resultados visiveis desde a primeira consulta.
+              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem você, e tecnologia que entrega resultados visíveis desde a primeira consulta,
             </p>
 
             <div className={styles.actions}>
@@ -35,23 +34,6 @@ export default function Hero() {
               >
                 Ver Tratamentos <ArrowRight size={16} />
               </button>
-            </div>
-
-            <div className={styles.trust}>
-              <div className={styles.avatars}>
-                {[11, 12, 13].map((n, index) => (
-                  <img
-                    key={n}
-                    src={`https://i.pravatar.cc/40?img=${n}`}
-                    alt=""
-                    className={styles.avatar}
-                    style={{ marginLeft: index ? '-10px' : 0, zIndex: 3 - index }}
-                  />
-                ))}
-              </div>
-              <p className={styles.trustLabel}>
-                <strong>+500 pacientes</strong> avaliaram com 5 estrelas
-              </p>
             </div>
           </motion.div>
 

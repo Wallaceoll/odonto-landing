@@ -47,32 +47,19 @@
   letter-spacing: -.03em;
   line-height: 1.1;
 }
-.em {
-  font-style: italic;
-  color: var(--c-primary);
-  position: relative;
-}
-.em::after {
-  content: '';
-  position: absolute;
-  bottom: 2px; left: 0; right: 0; height: 3px;
-  background: var(--c-primary);
-  opacity: .25;
-  border-radius: 2px;
-}
 
 .lead { font-size: 1.05rem; line-height: 1.72; color: var(--c-slate); max-width: 500px; }
 
 .actions { display: flex; flex-wrap: wrap; gap: .875rem; }
 .mainCta { font-size: 1rem !important; padding: .95rem 2rem !important; }
 
-.trust { display: flex; align-items: center; gap: .85rem; }
-.avatars { display: flex; align-items: center; }
-.avatar { width: 34px; height: 34px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
-.trustLabel { font-size: .85rem; color: var(--c-muted); }
-.trustLabel strong { color: var(--c-ink); }
-
 .imgCol {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+@media (min-width: 1024px) {
+  .imgCol { padding: 1rem 1.5rem 1rem 0; }
+}
+
   padding: 1rem 1.5rem 1rem 1.5rem;
 }
 @media (min-width: 1024px) {
