@@ -67,7 +67,7 @@ export default function Testimonials() {
             Cada relato e de alguem que passou pela nossa cadeira e saiu diferente. Nao so o sorriso, a confianca tambem.
           </p>
           <div className={styles.aggregate}>
-            <span className={styles.aggScore}>4.9</span>
+            <span className={styles.aggScore}>5.0</span>
             <div>
               <div className={styles.aggStars}>*****</div>
               <p className={styles.aggLabel}>Baseado em avaliações no Google</p>
