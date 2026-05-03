@@ -5,19 +5,19 @@ import styles from './Convenios.module.css'
 const plans = [
   { name: 'Unimed', abbr: 'U', color: '#00a650' },
   { name: 'Bradesco', abbr: 'B', color: '#cc0000' },
-  { name: 'SulAmerica', abbr: 'S', color: '#003087' },
+  { name: 'SulAmérica', abbr: 'S', color: '#003087' },
   { name: 'Amil', abbr: 'A', color: '#e4002b' },
   { name: 'Porto Seguro', abbr: 'P', color: '#004b8d' },
   { name: 'Prevent Senior', abbr: 'PS', color: '#00698c' },
   { name: 'Golden Cross', abbr: 'G', color: '#c8960c' },
-  { name: 'Odontoprev', abbr: 'O', color: '#0080c6' },
+  { name: 'OdontoPrev', abbr: 'O', color: '#0080c6' },
 ]
 
 const perks = [
   'Primeira consulta sempre gratuita',
-  'Parcelamento em ate 18x sem juros',
-  'Atendimento de urgencia incluso',
-  'Orcamento detalhado sem surpresas',
+  'Parcelamento em até 18x sem juros',
+  'Atendimento de urgência incluso',
+  'Orçamento detalhado, sem surpresas',
 ]
 
 export default function Convenios({ onBooking }) {
@@ -25,9 +25,9 @@ export default function Convenios({ onBooking }) {
     <section id="convenios" className={styles.section}>
       <div className={styles.container}>
         <div className="section-header">
-          <span className="eyebrow">Convenios e Pagamento</span>
-          <h2 className="section-title">Seu plano provavelmente e aceito aqui.</h2>
-          <p className="section-sub">Trabalhamos com os principais convenios e oferecemos condicoes flexiveis para quem nao tem plano.</p>
+          <span className="eyebrow">Convênios e Pagamento</span>
+          <h2 className="section-title">Seu plano provavelmente é aceito aqui.</h2>
+          <p className="section-sub">Trabalhamos com os principais convênios e oferecemos condições flexíveis para quem não tem plano.</p>
         </div>
 
         <motion.div
@@ -78,12 +78,12 @@ export default function Convenios({ onBooking }) {
             className={styles.ctaBox}
           >
             <span className={styles.ctaEyebrow}>Sem compromisso</span>
-            <h3 className={styles.ctaTitle}>Avaliacao gratuita, completa e sem pressa.</h3>
+            <h3 className={styles.ctaTitle}>Avaliação gratuita, completa e sem pressa.</h3>
             <p className={styles.ctaText}>
-              Venha conhecer o consultorio. Fazemos raio-X panoramico, avaliacao clinica e apresentamos um plano personalizado de graca.
+              Venha conhecer o consultório. Fazemos raio-X panorâmico, avaliação clínica e apresentamos um plano personalizado, de graça.
             </p>
             <button onClick={onBooking} className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
-              Agendar Avaliacao Gratuita
+              Agendar Avaliação Gratuita
             </button>
           </motion.div>
         </div>
