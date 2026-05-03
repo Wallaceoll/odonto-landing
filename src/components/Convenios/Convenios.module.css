@@ -39,7 +39,7 @@
   letter-spacing: -.02em;
 }
 .perksList { list-style: none; display: flex; flex-direction: column; gap: .875rem; }
-.perk { display: flex; align-items: flex-start; gap: .65rem; font-size: .95rem; color: var(--c-slate); line-height: 1.5; }
+.perk { display: flex; align-items: flex-start; gap: .65rem; font-size: .95rem; color: var(--c-navy); line-height: 1.5; }
 .checkIcon { color: var(--c-accent); flex-shrink: 0; margin-top: 2px; }
 
 .ctaBox {
@@ -53,5 +53,5 @@
   text-transform: uppercase; color: var(--c-primary-light);
 }
 .ctaTitle { font-size: 1.5rem; font-weight: 700; color: white; letter-spacing: -.02em; line-height: 1.25; }
-.ctaText { font-size: .9rem; color: rgba(255,255,255,.55); line-height: 1.65; }
+.ctaText { font-size: .9rem; color: var(--c-slate); line-height: 1.65; }
 

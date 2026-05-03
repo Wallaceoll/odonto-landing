@@ -58,7 +58,7 @@
   border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
 }
 .cardTitle { font-size: 1.1rem; font-weight: 700; color: var(--c-navy); }
-.cardDesc { font-size: .9rem; line-height: 1.65; color: var(--c-slate); flex: 1; }
+.cardDesc { font-size: .9rem; line-height: 1.65; color: var(--c-navy); flex: 1; }
 
 .cardBtn {
   display: inline-flex;
@@ -97,5 +97,5 @@
 }
 .bottomText { display: flex; flex-direction: column; gap: .3rem; }
 .bottomText strong { color: white; font-size: 1.1rem; }
-.bottomText span { color: rgba(255,255,255,.55); font-size: .9rem; }
+.bottomText span { color: var(--c-slate); font-size: .9rem; }
 
