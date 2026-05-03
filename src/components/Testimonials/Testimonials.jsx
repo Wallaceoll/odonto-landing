@@ -70,7 +70,7 @@ export default function Testimonials() {
             <span className={styles.aggScore}>4.9</span>
             <div>
               <div className={styles.aggStars}>*****</div>
-              <p className={styles.aggLabel}>Baseado em +500 avaliacoes no Google</p>
+              <p className={styles.aggLabel}>Baseado em avaliações no Google</p>
             </div>
           </div>
         </div>
