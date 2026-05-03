@@ -13,10 +13,10 @@
 }
 .card:hover { box-shadow: var(--sh-md); transform: translateY(-4px); }
 
-.imgWrap { height: 260px; overflow: hidden; }
+.imgWrap { height: 320px; overflow: hidden; }
 .img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: top center;
+  object-fit: cover; object-position: center center;
   transition: transform .5s var(--ease);
 }
 .card:hover .img { transform: scale(1.04); }
