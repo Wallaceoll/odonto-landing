@@ -91,7 +91,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>
-            (c) {yr} DentalCare Premium | Todos os direitos reservados a{' '}
+            (C) {yr} DentalCare Premium | Todos os direitos reservados a{' '}
             <a 
               href="https://kodantech-cjcz.vercel.app/" 
               target="_blank" 
