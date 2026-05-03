@@ -58,7 +58,7 @@ export default function Hero() {
                 transition={{ delay: 0.7 }}
               >
                 <div className={styles.pillDot} />
-                <span>Proximo horario disponivel hoje</span>
+                <span>Próximo horário disponível hoje</span>
               </motion.div>
 
               <motion.div

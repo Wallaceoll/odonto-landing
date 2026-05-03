@@ -5,9 +5,9 @@ import styles from './Testimonials.module.css'
 const items = [
   {
     name: 'Mariana O.',
-    role: 'Empresaria',
+    role: 'Empresária',
     img: 'https://i.pravatar.cc/72?img=5',
-    text: 'Tinha vergonha de sorrir em fotos. Depois das facetas, passei semanas tirando selfie. Parece exagero, mas quem viveu isso entende.',
+    text: 'Tinha vergonha de sorrir em fotos. Depois das facetas, passei semanas tirando selfies. Parece exagero, mas quem viveu isso entende.',
     treatment: 'Facetas de Porcelana',
     stars: 5,
   },
@@ -15,23 +15,23 @@ const items = [
     name: 'Carlos M.',
     role: 'Engenheiro',
     img: 'https://i.pravatar.cc/72?img=12',
-    text: 'Fiz o implante e nao senti nada durante o procedimento. Achei que ia ser um pesadelo, mas foi o tratamento mais tranquilo que ja fiz.',
-    treatment: 'Implante Dentario',
+    text: 'Fiz o implante e não senti nada durante o procedimento. Achei que ia ser um pesadelo, mas foi o tratamento mais tranquilo que já fiz.',
+    treatment: 'Implante Dentário',
     stars: 5,
   },
   {
-    name: 'Patricia L.',
+    name: 'Patrícia L.',
     role: 'Advogada',
     img: 'https://i.pravatar.cc/72?img=9',
-    text: 'O Invisalign mudou minha relacao com o espelho. Discreto, confortavel e o resultado ficou exatamente como prometido.',
+    text: 'O Invisalign mudou minha relação com o espelho. Discreto, confortável e o resultado ficou exatamente como prometido.',
     treatment: 'Invisalign',
     stars: 5,
   },
   {
     name: 'Fernando C.',
-    role: 'Medico',
+    role: 'Médico',
     img: 'https://i.pravatar.cc/72?img=15',
-    text: 'Como profissional de saude, sou muito exigente. A biosseguranca, os equipamentos e o nivel tecnico da equipe me surpreenderam.',
+    text: 'Como profissional de saúde, sou muito exigente. A biossegurança, os equipamentos e o nível técnico da equipe me surpreenderam.',
     treatment: 'Clareamento + Limpeza',
     stars: 5,
   },
@@ -39,16 +39,16 @@ const items = [
     name: 'Luciana R.',
     role: 'Professora',
     img: 'https://i.pravatar.cc/72?img=20',
-    text: 'Procrastinei anos por medo do dentista. Aqui fui recebida com tanta gentileza que hoje venho as limpezas semestrais com prazer.',
-    treatment: 'Prevencao e Saude',
+    text: 'Procrastinei anos por medo do dentista. Aqui fui recebida com tanta gentileza que hoje venho às limpezas semestrais com prazer.',
+    treatment: 'Prevenção e Saúde',
     stars: 5,
   },
   {
     name: 'Ricardo T.',
     role: 'Executivo',
     img: 'https://i.pravatar.cc/72?img=17',
-    text: 'O protocolo All-on-4 me devolveu algo que eu nao sabia que sentia falta: comer sem pensar. Qualidade de vida no sentido mais literal.',
-    treatment: 'Protese All-on-4',
+    text: 'O protocolo All-on-4 me devolveu algo que eu não sabia que sentia falta: comer sem pensar. Qualidade de vida no sentido mais literal.',
+    treatment: 'Prótese All-on-4',
     stars: 5,
   },
 ]
@@ -64,7 +64,7 @@ export default function Testimonials() {
           <span className={styles.eyebrow}>Depoimentos</span>
           <h2 className={styles.title}>O que nossos Pacientes Dizem</h2>
           <p className={styles.sub}>
-            Cada relato e de alguem que passou pela nossa cadeira e saiu diferente. Nao so o sorriso, a confianca tambem.
+            Cada relato é de alguém que passou pela nossa cadeira e saiu diferente. Não só o sorriso, a confiança também.
           </p>
           <div className={styles.aggregate}>
             <span className={styles.aggScore}>5.0</span>
