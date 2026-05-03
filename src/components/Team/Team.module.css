@@ -34,11 +34,14 @@
 .name { font-size: 1.05rem; font-weight: 700; color: var(--c-navy); }
 .role { font-size: .85rem; font-weight: 600; color: var(--c-primary); }
 .quote {
-  font-size: 0.9rem; line-height: 1.6; color: var(--c-navy);
-  opacity: 0.85;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--c-navy);
+  opacity: 1;
   font-style: italic;
   border-left: 3px solid var(--c-primary);
   padding-left: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
 }
 
