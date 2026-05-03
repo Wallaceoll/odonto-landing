@@ -48,6 +48,20 @@
   line-height: 1.1;
 }
 
+.em {
+  font-style: italic;
+  color: var(--c-primary);
+  position: relative;
+}
+.em::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 0; right: 0; height: 3px;
+  background: var(--c-primary);
+  opacity: .25;
+  border-radius: 2px;
+}
+
 .lead { font-size: 1.05rem; line-height: 1.72; color: var(--c-navy); max-width: 500px; }
 
 .actions { display: flex; flex-wrap: wrap; gap: .875rem; }

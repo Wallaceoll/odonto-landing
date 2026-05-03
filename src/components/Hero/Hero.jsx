@@ -20,11 +20,12 @@ export default function Hero() {
             <span className="eyebrow">Odontologia de Alta Performance</span>
 
             <h1 className={styles.h1}>
-              O sorriso que você sempre quis ter, esta aqui.<br/>
+              O sorriso que você sempre quis ter,<br/>
+              <span className={styles.em}>está aqui.</span>
             </h1>
 
             <p className={styles.lead}>
-              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem você, e tecnologia que entrega resultados visíveis desde a primeira consulta,
+              Cuide do seu sorriso em um ambiente moderno, com especialistas que realmente ouvem você e tecnologia que entrega resultados visíveis desde a primeira consulta.
             </p>
 
             <div className={styles.actions}>
@@ -46,7 +47,7 @@ export default function Hero() {
             <div className={styles.imgWrap}>
               <img
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=85"
-                alt="Consultorio premium DentalCare"
+                alt="Consultório premium DentalCare"
                 className={styles.heroImg}
               />
               <div className={styles.imgVignette} />
