@@ -70,7 +70,7 @@ export default function Team() {
         <div className="section-header">
           <span className="eyebrow">Nossa Equipe</span>
           <h2 className="section-title">Especialistas que se importam com o seu resultado.</h2>
-          <p className="section-sub">Formacao de alto nivel, escuta ativa e tecnica que se traduz em sorrisos reais.</p>
+          <p className="section-sub">Formação de alto nível, escuta ativa e técnica que se traduzem em sorrisos reais.</p>
         </div>
 
         <motion.div
