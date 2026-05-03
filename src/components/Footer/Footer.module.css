@@ -202,6 +202,7 @@
 .bottom p { 
   font-size: 0.8rem; 
   color: #94a3b8; 
+  letter-spacing: 0.02em;
 }
 
 .legal { 
@@ -218,4 +219,16 @@
 
 .legal a:hover { 
   color: #f1f5f9; 
+}
+
+.devLink {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--tx);
+}
+
+.devLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }

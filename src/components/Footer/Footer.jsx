@@ -2,8 +2,8 @@
 import styles from './Footer.module.css'
 
 const links = {
-  Tratamentos: ['Clareamento', 'Implantes', 'Invisalign', 'Facetas', 'Proteses', 'Prevencao'],
-  Clinica: ['Sobre Nos', 'Nossa Equipe', 'Convenios', 'FAQ'],
+  Tratamentos: ['Clareamento', 'Implantes', 'Invisalign', 'Facetas', 'Próteses', 'Prevenção'],
+  Clínica: ['Sobre Nós', 'Nossa Equipe', 'Convênios', 'FAQ'],
 }
 
 export default function Footer() {
@@ -25,20 +25,25 @@ export default function Footer() {
                 <span className={styles.logoSub}>Premium</span>
               </div>
             </div>
-            <p className={styles.tagline}>Odontologia que respeita o seu tempo, o seu orcamento e, acima de tudo, o seu sorriso.</p>
+            
+            <p className={styles.tagline}>
+              Odontologia de alta performance que valoriza seu tempo e transforma sorrisos com precisão e transparência.
+            </p>
+
             <div className={styles.contacts}>
               {[
-                { icon: <Phone size={14}/>, val: '(11) 3000-0000', href: 'tel:+5511999999999' },
+                { icon: <Phone size={14}/>, val: '(11) 3000-0000', href: 'tel:+551130000000' },
                 { icon: <Phone size={14}/>, val: 'WhatsApp: (11) 99999-9999', href: 'https://wa.me/5511999999999' },
                 { icon: <Mail size={14}/>, val: 'contato@dentalcare.com.br', href: 'mailto:contato@dentalcare.com.br' },
                 { icon: <MapPin size={14}/>, val: 'Av. Paulista, 1000 - Bela Vista, SP' },
-                { icon: <Clock size={14}/>, val: 'Seg-Sex 8h-20h | Sab 8h-14h' },
+                { icon: <Clock size={14}/>, val: 'Seg-Sex 8h-20h | Sáb 8h-14h' },
               ].map((contact, index) => (
                 contact.href
                   ? <a key={index} href={contact.href} className={styles.contact}>{contact.icon}{contact.val}</a>
                   : <span key={index} className={styles.contact}>{contact.icon}{contact.val}</span>
               ))}
             </div>
+
             <div className={styles.socials}>
               {[
                 { icon: <Instagram size={17}/>, href: '#', label: 'Instagram' },
@@ -54,7 +59,11 @@ export default function Footer() {
             <div key={group} className={styles.col}>
               <h4 className={styles.colTitle}>{group}</h4>
               <ul className={styles.colList}>
-                {items.map((item) => <li key={item}><a href="#" className={styles.colLink}>{item}</a></li>)}
+                {items.map((item) => (
+                  <li key={item}>
+                    <a href="#" className={styles.colLink}>{item}</a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -69,14 +78,29 @@ export default function Footer() {
                 loading="lazy"
               />
             </div>
-            <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer" className={styles.mapsLink}>
+            <a 
+              href="https://goo.gl/maps/example" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.mapsLink}
+            >
               Abrir no Google Maps
             </a>
           </div>
         </div>
 
         <div className={styles.bottom}>
-          <p>(c) {yr} DentalCare Premium | Todos os direitos reservados</p>
+          <p>
+            (c) {yr} DentalCare Premium | Todos os direitos reservados a{' '}
+            <a 
+              href="https://kodantech-cjcz.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.devLink}
+            >
+              KodanTech
+            </a>
+          </p>
           <div className={styles.legal}>
             <a href="#">Privacidade</a>
             <a href="#">Termos</a>
