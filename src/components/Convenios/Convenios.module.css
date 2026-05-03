@@ -53,5 +53,5 @@
   text-transform: uppercase; color: var(--c-primary-light);
 }
 .ctaTitle { font-size: 1.5rem; font-weight: 700; color: white; letter-spacing: -.02em; line-height: 1.25; }
-.ctaText { font-size: .9rem; color: var(--c-slate); line-height: 1.65; }
+.ctaText { font-size: .9rem; color: rgba(255,255,255,.9); line-height: 1.65; }
 
